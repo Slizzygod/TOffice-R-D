@@ -1,0 +1,11 @@
+<p-menubar [model]="mainMenuitems">
+  <ng-template pTemplate="start">
+    <img src="../../assets/logo.png" height="50" class="mr-2" />
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="p-ripple p-element p-menuitem-link" (click)="menu.toggle($event)">
+      <i class="pi pi-user"></i>
+    </div>
+    <p-menu #menu [popup]="true" [model]="profileMenuItems"></p-menu>
+  </ng-template>
+</p-menubar>
